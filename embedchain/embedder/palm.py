@@ -6,7 +6,7 @@ from importlib.util import find_spec
 
 from embedchain.config import BaseEmbedderConfig
 from embedchain.embedder.base import BaseEmbedder
-from embedchain.models import EmbeddingFunctions
+from embedchain.models import VectorDimensions
 
 
 class PalmEmbedder(BaseEmbedder):
@@ -27,4 +27,4 @@ class PalmEmbedder(BaseEmbedder):
         embedding_fn = BaseEmbedder._langchain_default_concept(embeddings)
 
         self.set_embedding_fn(embedding_fn=embedding_fn)
-        self.set_vector_dimension(vector_dimension=EmbeddingFunctions.PALM.value)
+        self.set_vector_dimension(vector_dimension=VectorDimensions.PALM.value)
